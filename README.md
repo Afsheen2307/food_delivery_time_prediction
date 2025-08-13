@@ -43,10 +43,13 @@ pip install -r requirements.txt
 
 
  Usage
+ 
  Train the Model
+ 
  python src/train_model.py --data data/deliverytime.csv --save_model models/model.pkl
 
 Predict Delivery Time
+
 from src.train_model import load_model
 import pandas as pd
 
@@ -59,17 +62,27 @@ new_order = pd.DataFrame({
 print(f"Predicted Time: {model.predict(new_order)[0]:.2f} minutes")
 
 
+
 Project Workflow
+
 1.Data Loading & Cleaning
+
 2.Feature Engineering (distance calculation, time-based features)
+
 3.Exploratory Data Analysis (EDA)
+
 4Model Training (Linear Regression, Decision Tree, Random Forest, etc.)
+
 5.Evaluation (MSE, RMSE, R²)
+
 6.Prediction on New Data
 
 
 
-📈 Results
+ Results
+
 1.Positive correlation between distance and delivery time.
+
 2.Younger delivery partners generally deliver faster.
+
 3.Higher-rated partners tend to be more efficient.
